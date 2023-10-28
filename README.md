@@ -10,7 +10,8 @@ With the DAG script, each of these scripts will execute as an Airflow DAG job.
 
 Consider this project as a pandas exercise and a different approach to locally storing the data.
 
-![image](https://github.com/quanganh247-qa/PostgreSQL-Airflow-Docker-Pandas/assets/125935864/8278cf76-7d07-44a0-a9e6-95b85d449043)
+![image](https://github.com/quanganh247-qa/PostgreSQL-Airflow-Docker-Pandas/assets/125935864/e2774fd3-bfe1-4f18-980d-8da3c7c46a41)
+
 
 
 ## Technically
@@ -176,11 +177,13 @@ You can use the below docker-compose.yaml file to run the Airflow as a Docker co
 ```docker-compose -f docker-compose-LocalExecutor.yml up -d```
 
 Now you have a running Airflow container and you can access the UI at https://localhost:8080. If some errors occur with the libraries and packages, we can go into the Airflow container and install them all manually
-![image](https://github.com/quanganh247-qa/PostgreSQL-Airflow-Docker-Pandas/assets/125935864/cb741a87-9f0e-47a7-aef1-f7a718ec2f3a)
+
+![image](https://github.com/quanganh247-qa/PostgreSQL-Airflow-Docker-Pandas/assets/125935864/484b5346-67d4-4759-895e-64a2570dd3d0)
+
 
 After running our Airflow DAG, we can see that the initial table is created inside our PostgreSQL server
 
-![image](https://github.com/quanganh247-qa/PostgreSQL-Airflow-Docker-Pandas/assets/125935864/ac0402e2-fac3-4b1d-9829-42cebd93f11b)
+![image](https://github.com/quanganh247-qa/PostgreSQL-Airflow-Docker-Pandas/assets/125935864/adc01a82-0b54-4ad2-9b58-c3e4aa68fd2b)
 
 The CSV data is then added to it. Following this, the data will be edited and published into the Postgres server's freshly made tables. By connecting pgAdmin, we can verify each step.
 
